@@ -1,0 +1,129 @@
+:root{
+    --Pale-Violet: hsl(276, 100%, 81%);
+    --Moderate-Violet: hsl(276, 55%, 52%);
+    --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+    --Grayish-Blue: hsl(206, 6%, 79%);
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+    
+    /*Gradients*/    
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+    
+    /*Secondary*/    
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet: hsl(270, 20%, 96%);
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    --Very-Light-Magenta: hsl(289, 100%, 72%);
+}
+
+*{
+    font-family: 'Rubik', sans-serif;;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--Light-Grayish-Violet);
+    display:grid;
+    grid-template-rows: 1fr 0.8fr;
+    grid-template-areas: 'phone' 'content';
+    grid-row-gap: 2rem;
+    align-items: center ;
+    justify-items: center;
+}
+.phone-container{
+    grid-area: 'phone';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    grid-area: 'content';
+}
+h3{
+    font-size: 9px;
+    margin: 0;
+    padding: 0;
+}
+.phone{
+    border-radius: 18px;
+    background-color: #fff;
+    width: 250px;
+    height: 500px;
+    position: relative;
+}
+.phone::before{
+    content: "";
+    position: absolute;
+    height: 25px;
+    border-radius: 35px;
+    width: 50%;
+    top:0px;
+    left: 27%;
+    background-color: #fff;
+    z-index: 1;
+}
+.inner-phone{
+    background-color: var(--Light-Grayish-Violet);
+    border-radius: inherit;
+    width: 90%;
+    height: 95%;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+.inner-phone img{
+    width: 45px;
+    border-radius: 10px;
+}
+.inner-phone p{
+    font-size: 9px;
+}
+
+.phone-header{
+    background-image: linear-gradient(to left, var(--Light-Magenta), var(--Light-Violet));
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 12%;
+    color: #fff;
+    position: relative;
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+.phone-header::before{
+    content: '\1438';
+    font-size: 8px;
+    font-weight: bold;
+    line-height: 2;
+    color: #fff;
+    z-index: 1;
+    position: absolute;
+    top: 45%;
+    left: 4%
+}
+.phone-header::after{
+    content: '\2807';
+    font-size: 10px;
+    color: #fff;
+    z-index: 1;
+    position: absolute;
+    top: 45%;
+    right: 6%
+}
+.avatar-info{
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 8%
+}
+.avatar-info p{
+    font-size: 6px;
+}
+#avatar{
+    border-radius: 50%;
+    border: 0.5px solid #fff;
+    width: 20px;
+    float: left;    
+    margin: 0 0.3rem;
+}
